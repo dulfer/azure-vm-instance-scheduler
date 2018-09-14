@@ -16,6 +16,8 @@ Example:
     `08:00-18:00|W. Europe Standard Time|mon,tue,wed,thu,fri`  
     `07:00-20:00|Central America Standard Time|mon,tue,wed,thu,fri,sat`  
 
+*An overview of available TimeZoneIDs can be found here:* [TimeZoneIDs.md](https://github.com/dulfer/azure-vm-businesshours-state/blob/master/TimeZoneIDs.md)
+
 ### *Tag:* BusinessHoursSizePattern ###
 *Definition of the VM state or size during and outside business hours.*  
 State can either be on or off, or a VM size to scale to.  
