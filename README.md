@@ -14,7 +14,7 @@ __Note thate there *will be* downtime when rescaling VMs__
 Format:	  __[time from]__ - __[time to]__ | __[TimeZone ID]__ | __[workdays; comma separated]__  
 Example:  
     `08:00-18:00|W. Europe Standard Time|mon,tue,wed,thu,fri`  
-    `07:00-23:00|India Standard Time|mon,tue,wed,thu,fri,sat`  
+    `07:00-20:00|Central America Standard Time|mon,tue,wed,thu,fri,sat`  
 
 ### *Tag:* BusinessHoursSizePattern ###
 *Definition of the VM state or size during and outside business hours.*  
