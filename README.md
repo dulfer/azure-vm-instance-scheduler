@@ -9,31 +9,31 @@ __Note thate there *will be* downtime when rescaling VMs__
 *Azure Tags are only available for Azure RM resources (ARM). Azure Tags cannot be assigned to VMs that are deployed using Classic compute and therefore cannot be controlled using this script.*
 
 ## Quick Reference ##
-### *Tag:* BusinessHours ###
-*Pattern describing the business hours, business timezone and workdays*
-Format:	  __[time from]__ - __[time to]__ | __[TimeZone ID]__ | __[workdays; comma separated]__
-Example:
-    `08:00-18:00|W. Europe Standard Time|mon,tue,wed,thu,fri`
-    `07:00-23:00|India Standard Time|mon,tue,wed,thu,fri,sat`
+### *Tag:* BusinessHours ###  
+*Pattern describing the business hours, business timezone and workdays*  
+Format:	  __[time from]__ - __[time to]__ | __[TimeZone ID]__ | __[workdays; comma separated]__  
+Example:  
+    `08:00-18:00|W. Europe Standard Time|mon,tue,wed,thu,fri`  
+    `07:00-23:00|India Standard Time|mon,tue,wed,thu,fri,sat`  
 
 ### *Tag:* BusinessHoursSizePattern ###
-*Definition of the VM state or size during and outside business hours.*
-State can either be on or off, or a VM size to scale to.
-Format:	  __[state during business hours]__ | __[state outside business hours]__
-Example:
-  `on|off`
-  `standard_B4ms|standard_B2s`
-  `Standard_D3_v2_Promo|off`
+*Definition of the VM state or size during and outside business hours.*  
+State can either be on or off, or a VM size to scale to.  
+Format:	  __[state during business hours]__ | __[state outside business hours]__  
+Example:  
+  `on|off`  
+  `standard_B4ms|standard_B2s`  
+  `Standard_D3_v2_Promo|off`  
 
 ### *Tag:* BusinessHoursProcess ###
-*Indicates whether the resource should be processed by the script.
-When omitted, or true, the script will process this VM. When set to false it will be skipped.*
-Format:	  [boolean] (true or false)
-Example:  `false`
+*Indicates whether the resource should be processed by the script.  
+When omitted, or true, the script will process this VM. When set to false it will be skipped.*  
+Format:	  [boolean] (true or false)  
+Example:  `false`  
 
 
 ## TODO ##
-- [X] Code the script and commit
-- [ ] Complete readme, add some images on how to setup in Azure
-- [ ] Add reference to overview of timezone IDs
-- [ ] ?? Include overview of available VM sizes *quickly outdated* ??
+- [X] Code the script and commit  
+- [ ] Complete readme, add some images on how to setup in Azure  
+- [ ] Add reference to overview of timezone IDs  
+- [ ] ?? Include overview of available VM sizes *quickly outdated* ??  
