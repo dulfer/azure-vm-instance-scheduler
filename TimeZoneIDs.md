@@ -1,7 +1,10 @@
 # TimeZones and IDs lookup table
 
-Use this table to lookup the TimeZoneID corresponding to a given timezone.
-This ID is used in the __BusinessHoursSizePattern__ Tag that defines the business hours for a VM.
+Use this table to lookup the TimeZoneID corresponding to a given timezone.  
+This ID is used in the __BusinessHours__ Tag that defines the business hours for a VM.
+
+> Azure Tag: __BusinessHours__  
+> 08:00-18:00|**W. Europe Standard Time**|mon,tue,wed,thu,fri
 
 
 | __Time zone__  | __TimeZoneId__  |
