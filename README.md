@@ -5,6 +5,8 @@ Microsoft Azure offers a fast, flexible and easily scalable platform for hosting
 
 Instead of manually switching VMs on or off, or resizing its specs, at set times during the day, this PowerShell script (intended to run periodically in Azure Automation) scales VMs automatically according a pattern set using Azure Tags.
 
+![](https://github.com/dulfer/azure-vm-businesshours-state/raw/master/.github/AzureVM-Tags-BusinessHours-Microsoft%20Azure.jpg?s=600)
+
 __Note thate there *will be* downtime when rescaling VMs__  
 *Azure Tags are only available for Azure RM resources (ARM). Azure Tags cannot be assigned to VMs that are deployed using Classic compute and therefore cannot be controlled using this script.*  
 
