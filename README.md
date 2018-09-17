@@ -43,5 +43,5 @@ Example:  `false`
 ## TODO
 - [X] Code the script and commit  
 - [ ] Complete readme, add some images on how to setup in Azure  
-- [ ] Add reference to overview of timezone IDs  
+- [X] Add reference to overview of timezone IDs  
 - [ ] ?? Include overview of available VM sizes *quickly outdated* ??  
