@@ -42,9 +42,6 @@ Write-Output "`tProcessing $($VM.Name)..."
 if (("on", "off") -contains $DesiredState.ToLower()) {
     $v = Get-AzureRmVM -ResourceGroupName $VM.ResourceGroupName -Name $VM.Name -Status
     if (($v.Statuses.DisplayStatus -contains "VM running") -and ($DesiredState.ToLower() -eq "off")) {
-
-        # TODO: clean shutdown prior to updating size
-
         Write-Output "`tSwitching $DesiredState now..."
         $v | Stop-AzureRmVM -Force
     }
@@ -59,15 +56,13 @@ if (("on", "off") -contains $DesiredState.ToLower()) {
         Write-Output "`tVM already deallocated..."
     }
     else {
-        Write-Output "Unknown state, skipping..."
+        Write-Output "Unknown state, skipping..." 
     }
 }
 else {
     $v = Get-AzureRmVM -ResourceGroupName $VM.ResourceGroupName -Name $VM.Name
     if ($v.HardwareProfile.VMSize.ToString().ToLower() -ne $DesiredState.ToLower()) {
         Write-Output "`tScaling machine from $($v.HardwareProfile.VMSize.ToLower()) to $DesiredState"
-
-        # TODO: clean shutdown prior to updating size
 
         # resize the VM
         $v.HardwareProfile.VmSize = $DesiredState
